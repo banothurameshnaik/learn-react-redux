@@ -36,10 +36,10 @@ function App() {
       <br />
       {(() => {
         if(!isLogged) {
-          // Login
+          // Do Login
           return <button onClick={() => doLogin()} className="button blue">Login</button>
         } else {
-          // Already login
+          // Already logged in
           return <div>
             <h1>Welcome</h1>
             <button onClick={() => doLogout()} className="button blue">Logout</button>
