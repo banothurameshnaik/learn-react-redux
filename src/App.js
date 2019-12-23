@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { increment, decrement } from './actions';
@@ -21,8 +22,8 @@ function App() {
   return (
     <div className="App">
       <h1>Visit Count: {visitCount} </h1>
-      <button onClick={() => doIncrement()} >+</button>
-      <button onClick={() => doDecrement(3)} >-</button>
+      <button onClick={() => doIncrement()} className="button green">Increment by 1</button> 
+      <button onClick={() => doDecrement(3)} className="button red">Decrement by 3</button>
     </div>
   );
 }
