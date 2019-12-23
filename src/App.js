@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { increment, decrement } from './actions';
+import { increment, decrement, logout } from './actions';
+import { login } from './actions/index';
 
 
 function App() {
@@ -16,14 +17,36 @@ function App() {
   const doDecrement = (nr) => {
     return dispatch(decrement(nr));
   };
+
+  const doLogin = () => {
+    return dispatch(login());
+  };
+
+  const doLogout = () => {
+    return dispatch(logout());
+  };
   
-  const visitCount = useSelector((state) => state.visitCount );
+  const { visitCount, isLogged } = useSelector((state) => state );
   
   return (
     <div className="App">
       <h1>Visit Count: {visitCount} </h1>
       <button onClick={() => doIncrement()} className="button green">Increment by 1</button> 
       <button onClick={() => doDecrement(3)} className="button red">Decrement by 3</button>
+      <br />
+      {(() => {
+        if(!isLogged) {
+          // Login
+          return <button onClick={() => doLogin()} className="button blue">Login</button>
+        } else {
+          // Already login
+          return <div>
+            <h1>Welcome</h1>
+            <button onClick={() => doLogout()} className="button blue">Logout</button>
+          </div>
+        }
+      })()
+      }
     </div>
   );
 }

@@ -10,3 +10,15 @@ export const decrement = (nr) => {
         payload: nr,
     }
 };
+
+export const login = () => {
+    return {
+        type: 'LOGIN'
+    };
+};
+
+export const logout = () => {
+    return {
+        type: 'LOGOUT'
+    }
+};
