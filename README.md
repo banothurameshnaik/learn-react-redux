@@ -2,7 +2,7 @@
 
 This project helps to understad using redux in react to manage store
 
-![Sample output](public/React App.png.png?raw=1)
+![Sample output](public/ReactAppOutput.png?raw=1)
 
 Steps:
 
