@@ -4,7 +4,7 @@ This project helps to understand using redux in react to manage store
 
 *Sample output:*
 
-![Sample output](public/SampleOutput1.png?raw=1) ![Sample output](public/SampleOutput2.png?raw=1)
+![Sample output](public/SampleOutput1.png?raw=1) &nbsp; ![Sample output](public/SampleOutput2.png?raw=1)
 
 ## How to use
 
